@@ -20,7 +20,10 @@ end
     #roster.each{|k,v| newHash[k]=v.sort}
     #newHash
     
-    roster.map{|set,(k,v)| set[k]=v.sort}
+    roster.reduce({}){|memo,(k,v)|
+      memo[k]=v.sort
+      memo
+    }
   end
   
   
