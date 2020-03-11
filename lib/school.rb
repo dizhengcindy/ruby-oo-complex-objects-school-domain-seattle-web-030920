@@ -16,9 +16,11 @@ end
     
   end
   def sort 
-    newHash ={}
-   roster.each{|k,v| newHash[k]=v.sort}
-   newHash
+   # newHash ={}
+    #roster.each{|k,v| newHash[k]=v.sort}
+    #newHash
+    
+    roster.map{|set,(k,v)| set[k]=v.sort}
   end
   
   
